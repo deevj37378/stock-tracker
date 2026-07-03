@@ -14,7 +14,6 @@ async def main():
         check_websites = (check(session, website) for website in websites)
         await asyncio.gather(*check_websites)
 
-    
 
 async def check(session, website):
     try:
@@ -23,14 +22,6 @@ async def check(session, website):
         
     except Exception as e:
         print(f"{website} -> failed {e}")
-
-    
-
-
-    
-
-
-
 
 if __name__ == "__main__":
     asyncio.run(main())
